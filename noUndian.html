@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <style>
+        table {
+            width: 100%;
+        }
+
+        tr,
+        td {
+            border: 3px solid black;
+            font-size: 50px;
+            text-align: center;
+            padding: 8px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        i {
+            font-size: 12px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="tempat"></div>
+</body>
+<script>
+    var hasil = "<table>";
+    for (let i = 1; i < 1501; i++) {
+        if (i.toString().length == 1) {
+            hasil += "<tr><td>000" + i + "<br/><i>IKHTIBAR 16 MD.ASY-SYAFI'IYAH JUNGANYAR</i></td><td>000" + i + "<br/><i>IKHTIBAR 16 MD.ASY-SYAFI'IYAH JUNGANYAR</i></td></tr>";
+        } else if (i.toString().length == 2) {
+            hasil += "<tr><td>00" + i + "<br/><i>IKHTIBAR 16 MD.ASY-SYAFI'IYAH JUNGANYAR</i></td><td>00" + i + "<br/><i>IKHTIBAR 16 MD.ASY-SYAFI'IYAH JUNGANYAR</i></td></tr>";
+        } else if (i.toString().length == 3) {
+            hasil += "<tr><td>0" + i + "<br/><i>IKHTIBAR 16 MD.ASY-SYAFI'IYAH JUNGANYAR</i></td><td>0" + i + "<br/><i>IKHTIBAR 16 MD.ASY-SYAFI'IYAH JUNGANYAR</i></td></tr>";
+        } else {
+            hasil += "<tr><td>" + i + "<br/><i>IKHTIBAR 16 MD.ASY-SYAFI'IYAH JUNGANYAR</i></td><td>" + i + "<br/><i>IKHTIBAR 16 MD.ASY-SYAFI'IYAH JUNGANYAR</i></td></tr>";
+        }
+    }
+    hasil += "</table>";
+    document.getElementById("tempat").innerHTML = hasil;
+</script>
+
+</html>
